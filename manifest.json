@@ -1,0 +1,21 @@
+{
+  "manifest_version": 2,
+  "name": "Scheduler X",
+  "description": "Improvements over the current Local Motion scheduler",
+  "version": "0.0.1",
+  "permissions": [
+    "tabs",
+    "*://*/*",
+    "<all_urls>"
+  ],
+  "icons": { "16": "icon.png"
+           , "128": "icon128.png"
+           , "48": "icon48.png"
+           },
+  "content_scripts": [
+    {
+      "matches": ["http://dogfood.getlocalmotion.com/driver/localmotion/*"],
+      "js": ["lib/underscore-min.js", "lib/async.js", "lib/jquery-2.0.3.min.js","contentScript.js"]
+    }
+  ]
+}
